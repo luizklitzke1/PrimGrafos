@@ -62,7 +62,7 @@ int main()
 
     chaves[0] = 0; // Pegamos a primeira como partida arbitraria
 
-    for (int idxIteracao = 0; idxIteracao < n - 1; ++idxIteracao)
+    for (int idxIteracao = 0; idxIteracao < n; ++idxIteracao)
     {
         int vert = GetMenorChave(chaves, visitadas);
         visitadas[vert] = true;
