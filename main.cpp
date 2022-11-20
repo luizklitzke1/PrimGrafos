@@ -14,7 +14,7 @@ int n, m, u, v, c;
 
 int GetMenorChave(int chavesDisponiveis[], bool visitadas[])
 {
-    int menorIdx = 0;
+    int menorIdx = -1;
     int menor = INT_MAX;
 
     for (int i = 0; i < n; ++i)

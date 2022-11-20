@@ -7,7 +7,7 @@ public class Main
     //Busca a próxima menor vértice do grafo a ser processada
     public static int GetMenorChave(int chavesDisponiveis[], boolean visitadas[])
     {
-        int menorIdx = 0;
+        int menorIdx = -1;
         int menor = Integer.MAX_VALUE;
  
         for (int i = 0; i < chavesDisponiveis.length; ++i)
@@ -60,7 +60,7 @@ public class Main
 	
         chaves[0] = 0; // Pegamos a primeira como partida arbitraria
 
-        for (int idxIteracao = 0; idxIteracao < n - 1; ++idxIteracao)
+        for (int idxIteracao = 0; idxIteracao < n; ++idxIteracao)
         {
             int vert = GetMenorChave(chaves, visitadas);
             visitadas[vert] = true;
@@ -87,7 +87,7 @@ public class Main
             comprimento += chaves[i];
         }
         
-        System.out.print(comprimento);
+        System.out.println(comprimento);
 
         scan.close();
     }
